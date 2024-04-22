@@ -1,0 +1,19 @@
+CREATE DATABASE college;
+
+CREATE DATABASE IF NOT EXISTS college;
+DROP DATABASE IF EXISTS company;
+
+USE college;
+CREATE TABLE student(
+	id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT NOT NULL
+);
+
+INSERT INTO student VALUES( 1 , "DEBU" , 21);
+INSERT INTO student VALUES( 2 , "J COLE" , 27);
+INSERT INTO student VALUES( 3 , "KENDRICK" , 30);
+
+SELECT * FROM student;
+SHOW DATABASES;
+SHOW TABLES;
