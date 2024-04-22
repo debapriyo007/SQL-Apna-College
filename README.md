@@ -46,6 +46,7 @@ If you'd like to contribute to this repository by adding more SQL queries, exerc
 
 Special thanks to Shradha Ma'am for her excellent teaching and guidance in SQL at Apna College.
 
+<p align="center" style="font-size:20px; "> 💛 Happy Coding 💛 </p>
 
 
 
