@@ -98,4 +98,45 @@ FROM students as s
 RIGHT JOIN mycourse as c
 ON s.st_id = c.st_id 
 WHERE s.st_id IS NULL;
+
+
+
+-- Self join.
+-- Regular join but join it's self.
+
+
+CREATE TABLE employ(
+	id INT,
+    empname VARCHAR(50),
+    managerId VARCHAR(50)
+);
+
+INSERT INTO employ (id, empname, managerId)
+VALUES 
+(101, "adam" , 103),
+(102, "bib" , 104),
+(103, "alice" , null),
+(104, "snoop" , 103);
+
+SELECT * FROM employ;
+-- using sql cmd we find that whose manager is whome.
+SELECT a.empname as managerName, b.empname
+FROM employ as a
+JOIN employ as b
+ON a.id = b.managerId;
+
+-- UNION : 
+-- It's use to combined two or more sets using SELECT statement.
+-- It's gives me Unique Records.
+
+SELECT empname FROM employ
+UNION  -- this only unique value print
+SELECT empname FROM employ;
+
+SELECT empname FROM employ
+UNION ALL  -- print all
+SELECT empname FROM employ;
+
+
+
  
